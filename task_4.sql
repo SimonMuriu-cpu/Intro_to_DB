@@ -1,7 +1,4 @@
--- Switch to the database
-USE alx_book_store;
-
--- List full description of the table 'Books'
+-- List full description of the table 'Books' in alx_book_store
 SELECT 
     COLUMN_NAME AS 'Column',
     COLUMN_TYPE AS 'Type',
@@ -11,4 +8,5 @@ SELECT
     EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'Books'
+  AND TABLE_SCHEMA = 'alx_book_store'
 ORDER BY ORDINAL_POSITION;
